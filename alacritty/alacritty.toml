@@ -1,0 +1,13 @@
+[env]
+WINIT_X11_SCALE_FACTOR = "1.0"
+
+[window]
+dimensions = {columns = 112, lines = 32}
+
+[font]
+size = 15
+
+[general]
+import = [
+
+]

@@ -1,0 +1,10 @@
+xscreensaver --no-splash &
+lxqt-policykit-agent &
+lxqt-notificationd &
+lxqt-config-input --load-touchpad &
+exec xset b off &
+# xwallpaper --zoom ~/Pictures/wallpaper/fr\ an1.png &
+feh --bg-scale ~/.config/wallpaper/fr\ an1.png &
+# pidof pulseaudio || sh ~/.config/pipewire/pipewire.sh &
+# udisksctl mount -b /dev/sda4 &
+# tint2 &

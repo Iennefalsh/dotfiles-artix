@@ -1,0 +1,6 @@
+map d scroll half-down
+map u scroll half-up
+map f scroll full-down
+map b scroll full-up
+map D recolor
+set scroll-page-aware true

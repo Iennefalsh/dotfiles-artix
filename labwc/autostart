@@ -1,0 +1,11 @@
+# waybar &
+# swaybg -i ~/Pictures/wallpaper/fr\ an1.png -m fill & 
+hyprpaper &
+# exec ~/swayidle.sh
+hypridle &
+lxqt-policykit-agent &
+# udisksctl mount -b /dev/sda4 &
+exec xset b off &
+# pidof pulseaudio || sh ~/.config/pipewire/pipewire.sh &
+# dunst
+lxqt-notificationd
