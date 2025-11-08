@@ -4,7 +4,10 @@ lxqt-notificationd &
 lxqt-config-input --load-touchpad &
 exec xset b off &
 # xwallpaper --zoom ~/Pictures/wallpaper/fr\ an1.png &
-feh --bg-scale ~/.config/wallpaper/fr\ an1.png &
+feh --bg-fill ~/.config/wallpaper/fran1.png &
 # pidof pulseaudio || sh ~/.config/pipewire/pipewire.sh &
 # udisksctl mount -b /dev/sda4 &
 # tint2 &
+pgrep -a sh | grep wallpapertest || sh ~/wallpapertest.sh & 
+picom -I 0.085 -O 0.085 --daemon &
+conky -c ~/.config/dtos-conky-lnfls.conf &

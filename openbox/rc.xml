@@ -176,6 +176,9 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+    <keybind key="S-W-q">
+      <action name="Exit"></action>
+    </keybind>
     <keybind key="C-W-r">
       <action name="Execute">
         <command>openbox --reconfigure</command>
@@ -290,6 +293,11 @@
         <command>bemenu-run --single-instance</command>
       </action>
     </keybind>
+    <keybind key="W-space">
+      <action name="Execute">
+        <command>rofi -show drun</command>
+      </action>
+    </keybind>
     <keybind key="W-n">
       <action name="Execute">
         <command>waterfox</command>
@@ -380,17 +388,17 @@
     </keybind>
     <keybind key="Print">
       <action name="Execute">
-        <command>scrot '~/Pictures/%d-%m-%Y.png'</command>
+        <command>scrot ~/Pictures/%d-%m-%Y.png</command>
       </action>
     </keybind>
     <keybind key="S-Print">
       <action name="Execute">
-        <command>scrot "~/Pictures/%d-%m-%Y.png" -s -f</command>
+        <command>scrot ~/Pictures/%d-%m-%Y.png -s -f</command>
       </action>
     </keybind>
     <keybind key="W-Print">
       <action name="Execute">
-        <command>scrot "~/Pictures/%d-%m-%Y.png" -u</command>
+        <command>scrot ~/Pictures/%d-%m-%Y.png -u</command>
       </action>
     </keybind>
     <keybind key="W-F12">
