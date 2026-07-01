@@ -191,7 +191,7 @@
     </keybind>
     <keybind key="C-W-Home">
       <action name="Execute">
-        <command>~/git/st-0.9.2/st -e sh ~/.config/whiptest.sh</command>
+        <command>st -e sh ~/.config/whiptest.sh</command>
       </action>
     </keybind>
     <keybind key="W-b">
@@ -290,17 +290,18 @@
     </keybind>
     <keybind key="W-r">
       <action name="Execute">
-        <command>bemenu-run --single-instance</command>
+        <command>dmenu_run</command>
       </action>
     </keybind>
-    <keybind key="W-space">
+<!--    <keybind key="W-space">
       <action name="Execute">
         <command>rofi -show drun</command>
       </action>
     </keybind>
+-->
     <keybind key="W-n">
       <action name="Execute">
-        <command>waterfox</command>
+        <command>firefox</command>
       </action>
     </keybind>
     <keybind key="W-m">
@@ -310,7 +311,7 @@
     </keybind>
     <keybind key="W-Return">
       <action name="Execute">
-        <command>alacritty</command>
+        <command>st</command>
       </action>
     </keybind>
     <keybind key="W-Up">
@@ -374,6 +375,11 @@
     <keybind key="XF86AudioMute">
       <action name="Execute">
         <command>pactl set-sink-mute @DEFAULT_SINK@ toggle</command>
+      </action>
+    </keybind>
+    <keybind key="XF86AudioMicMute">
+      <action name="Execute">
+        <command>pactl set-source-mute @DEFAULT_SOURCE@ toggle</command>
       </action>
     </keybind>
     <keybind key="XF86MonBrightnessUp">

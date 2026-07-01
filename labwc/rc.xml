@@ -223,8 +223,11 @@
     <keybind key="C-W-l">
       <action name="Execute" command="loginctl lock-session" />
     </keybind>
+    <keybind key="W-S-q">
+      <action name="Exit" />
+    </keybind>
     <keybind key="C-W-Home">
-      <action name="Execute" command="~/git/st-0.9.2/st -e sh ~/.config/whiptest.sh" />
+      <action name="Execute" command="foot -e sh ~/.config/whiptest.sh" />
     </keybind>
     <keybind key="W-b">
       <action name="Execute" command="sh ~/.config/dunst/bat.sh" />
@@ -251,10 +254,10 @@
       <action name="NextWindow" />
     </keybind>
     <keybind key="W-Return">
-      <action name="Execute" command="alacritty" />
+      <action name="Execute" command="foot" />
     </keybind>
     <keybind key="W-r">
-      <action name="Execute" command="bemenu-run --single-instance" />
+      <action name="Execute" command="dmenu_run" />
     </keybind>
     <keybind key="W-w">
       <action name="Close" />
@@ -303,6 +306,9 @@
     <keybind key="XF86_AudioMute">
       <action name="Execute" command="pactl set-sink-mute @DEFAULT_SINK@ toggle" />
     </keybind>
+    <keybind key="XF86_AudioMicMute">
+      <action name="Execute" command="pactl set-source-mute @DEFAULT_SOURCE@ toggle" />
+    </keybind>
     <keybind key="XF86_MonBrightnessUp">
       <action name="Execute" command="brightnessctl set +5%" />
     </keybind>
@@ -313,16 +319,13 @@
       <action name="Execute" command="pcmanfm-qt" />
     </keybind>
     <keybind key="W-n">
-      <action name="Execute" command="qutebrowser" />
+      <action name="Execute" command="firefox" />
     </keybind>
     <keybind key="Print">
       <action name="Execute" command="sh ~/.config/labwc/grim.sh" />
     </keybind>
     <keybind key="S-Print">
       <action name="Execute" command="sh ~/.config/labwc/grims.sh" />
-    </keybind>
-    <keybind key="W-F12">
-      <action name="Execute" command="sh ~/.config/pipewire/pipewire.sh" />
     </keybind>
     <!-- SnapToRegion via W-Numpad -->
     <!--

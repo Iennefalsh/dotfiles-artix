@@ -1,11 +1,27 @@
+## Panel
 # waybar &
+# polybar &
+# lxqt-panel &
+
+## Wallpaper
 # swaybg -i ~/Pictures/wallpaper/fr\ an1.png -m fill & 
-hyprpaper &
-# exec ~/swayidle.sh
+# hyprpaper &
+awww-daemon &
+
+## Idle management
+# exec ~/swayidle.sh &
 hypridle &
+
+## Polkit
 lxqt-policykit-agent &
-# udisksctl mount -b /dev/sda4 &
-exec xset b off &
-# pidof pulseaudio || sh ~/.config/pipewire/pipewire.sh &
-# dunst
-lxqt-notificationd
+
+## Notification daemon
+# dunst &
+lxqt-notificationd &
+
+## Miscellaneous
+# udisksctl mount -b /dev/sda4 & # Very rough automount
+exec xset b off & # I hate the X11 bell
+# pidof pulseaudio || sh ~/.config/pipewire/pipewire.sh & # Used to autostart pipewire and pipewire-pulse manually; without using the service script
+wireplumber &
+
