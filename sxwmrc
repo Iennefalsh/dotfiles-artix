@@ -1,6 +1,6 @@
 K# Colour Themes:
-focused_border_colour    : #000000
-unfocused_border_colour  : #444444
+focused_border_colour    : #00ccff
+unfocused_border_colour  : #f69420
 swap_border_colour       : #eeeeee
 
 # General Options:
@@ -13,14 +13,14 @@ move_window_amount      : 50
 resize_window_amount    : 50
 snap_distance           : 5
 motion_throttle         : 60 # Set to screen refresh rate for smoothest motions
-should_float            : "pcmanfm", "obs", "nemo", "wine", "java", "javaw", "Minecraft"
+should_float            : "pcmanfm", "obs", "nemo", "wine", "java", "javaw", "Minecraft", "keepassxc", "Flashplayer", "pcmanfm-qt",
 new_win_focus           : true
-warp_cursor             : true
+warp_cursor             : false
 floating_on_top         : true
 new_win_master          : false
-can_swallow             : "st"
-can_be_swallowed        : "mpv", "sxiv"
-start_fullscreen        : "mpv", "vlc"
+can_swallow             : "st" 
+can_be_swallowed        : "mpv", "sxiv", "keepassxc"
+start_fullscreen        : "mpv", "vlc" 
 
 # Keybinds:
 # Commands must be surrounded with ""
@@ -28,11 +28,27 @@ start_fullscreen        : "mpv", "vlc"
 mod_key : super
 
 # Autostarts
-exec : "/usr/bin/feh --bg-fill ~/.config/wallpaper/fran3.jpg"
+
+# Enables audio for PipeWire
+exec : "wireplumber"
+# Wallpaper (feh, use absolute paths)
+exec : "feh --bg-fill /home/shioneko/git/dotfiles-artix/wallpaper/fran3.jpg"
+# Screen locker (xss-lock and slock)
 exec : "xss-lock slock"
-exec : "bash ~/.config/wallpapertest.sh"
 exec : "st"
-exec : "/usr/bin/feh ~/.config/wallpaper/fran3.jpg"
+# Compositor, for transparency and animations
+exec : "picom"
+
+# Volume Control
+bind : XF86AudioRaiseVolume : "pactl set-sink-volume @DEFAULT_SINK@ +5%"
+bind : XF86AudioLowerVolume : "pactl set-sink-volume @DEFAULT_SINK@ -5%"
+bind : XF86AudioMute : "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+bind : XF86AudioMicMute : "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+
+# Brightness Control
+bind : XF86MonBrightnessUp : "brightnessctl s +5%"
+bind : XF86MonBrightnessDown : "brightnessctl s 5%-"
+
 # Application Launchers:
 bind : mod + Return : "st"
 bind : mod + n : "firefox"
